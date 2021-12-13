@@ -1,0 +1,20 @@
+[
+    {
+        "Title": "CloudBook",
+        "Info": "Web based application coded in Javascript to imitate a social media website. Built using the cloudflare serverless worker function",
+        "Live": "https://cloudflare-socialmedia.pages.dev/",
+        "Github": "https://github.com/malcolmhess3/cloudflare_socialmedia"
+    },
+    {
+        "Title": "Python Image Viewer",
+        "Info": "Simple Image viewer built in Python using PYQT 5. Features include Zoom in, Zoom out, Opening files from the File system, and Viewing the next and previous images in the same folder",
+        "Live": "",
+        "Github": "https://github.com/malcolmhess3/Python-Image-Viewer"
+    },
+    {
+        "Title": "Anki bulk flash card generator",
+        "Info": "Quickly create bulk flash cards for Anki using words from a word list. Built using Python and the Anki flash card creation library. App calls a Japanese to english dictionary API to gather translation information. App also uses HTML scrapping to gather example sentences from the Jisho website. ",
+        "Live": "",
+        "Github": "https://github.com/malcolmhess3/Anki-Bulk-Flash-Cards"
+    }
+]

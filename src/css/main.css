@@ -1,0 +1,327 @@
+:root {
+  font-size: 20px;
+  font-family: "Consolas";
+  font-weight: normal;
+}
+
+body {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: .4rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #333333;
+}
+
+body::-webkit-scrollbar-track:hover {
+  background-color: #282828;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1E1E1E;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: darkgrey;
+}
+
+.App {
+  padding: 0;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  background-color: #333333;
+  position: relative;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 2vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .5rem;
+  background-color: #1E1E1E;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 1rem;
+  border: none;
+  color: white;
+  background-color: transparent;
+  text-align: center;
+  font-size: .6rem;
+  font-family: "Consolas";
+}
+
+header button:hover {
+  background-color: darkgrey;
+  cursor: pointer;
+}
+
+header .editText {
+  margin-left: 4rem;
+  width: 30rem;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 98vh;
+  width: 11rem;
+  position: fixed;
+  background-color: #1E1E1E;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  top: 2vh;
+  -webkit-box-shadow: 5px 0px 15px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 0px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-bar h1 {
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.nav-bar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  padding-top: 8vh;
+  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  height: auto;
+  width: auto;
+}
+
+.nav-bar .aLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-top: 1vh;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-weight: lighter;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.nav-bar .aLink:hover {
+  background-color: #333333;
+  color: green;
+}
+
+.nav-bar .active {
+  background-color: #333333;
+}
+
+.nav-bar button {
+  border: none;
+  color: white;
+  background-color: transparent;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Consolas";
+}
+
+.nav-bar button:hover {
+  background-color: darkgrey;
+  cursor: pointer;
+}
+
+.main-body-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 11rem;
+  width: auto;
+  height: auto;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.hero-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  height: 100vh;
+  font-weight: normal;
+}
+
+.hero-section h1 {
+  font-weight: inherit;
+  color: #A2D5f2;
+}
+
+.hero-section h2 {
+  font-weight: inherit;
+  color: #FF7E67;
+}
+
+.hero-section a {
+  margin-left: 2rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: .8rem 1.2rem;
+  color: white;
+  background-color: #131313;
+  border: #1E1E1E 1px solid;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+}
+
+.hero-section .text-wrapper {
+  margin: 10vh 0 0 10vh;
+  padding: 0;
+}
+
+.hero-section .computer-pic {
+  margin: 10vh 0 0 10vh;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: auto;
+}
+
+.project-section {
+  margin-top: 13vh;
+  margin-left: 2rem;
+  width: auto;
+  height: 87vh;
+}
+
+.project-section h1 {
+  color: white;
+}
+
+.proCarousel {
+  margin-top: 5vh;
+  margin-left: 20vh;
+}
+
+.proModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40vw;
+  height: 40vh;
+  border: white 1px solid;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.proModal h1 {
+  color: #FF7E67;
+}
+
+.proModal p {
+  color: #A2D5f2;
+}
+
+.about-section {
+  margin-top: 13vh;
+  margin-left: 2rem;
+  width: auto;
+  height: 87vh;
+}
+
+.contact-section {
+  margin-top: 13vh;
+  margin-left: 2rem;
+  width: auto;
+  height: 60vh;
+}
+
+.footer-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 3vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #027fd3;
+  bottom: 0;
+  position: absolute;
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    font-size: 16px;
+  }
+  .hero-section .computer-pic {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

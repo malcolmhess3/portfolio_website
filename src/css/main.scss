@@ -1,0 +1,469 @@
+$side-bar-width: 11rem;
+$dark-grey: #1E1E1E;
+$middle-grey: #333333;
+$light-grey: darkgrey;
+$pri-orange: #FF7E67;
+$pri-blue: #A2D5f2;
+
+
+:root{
+    font-size: 20px;
+    font-family: "Consolas";
+    font-weight: normal;
+}
+
+
+body{
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    &::-webkit-scrollbar{
+        width: .4rem;
+    }
+    &::-webkit-scrollbar-track{
+        background-color: $middle-grey;
+        &:hover{
+            background-color: darken($middle-grey, 4.5);
+        }
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: $dark-grey;
+        &:hover{
+            background-color: $light-grey;
+        }
+    }
+}
+
+.App {
+    // border: 2px solid red;
+    padding: 0;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    background-color: #333333;
+    position: relative;
+}
+
+header{
+    // margin-left: $side-bar-width;
+    // border: 1px solid red;
+    display: flex;
+    width: 100%;
+    height: 1rem;
+    align-items: center;
+    font-size: .5rem;
+    background-color: $dark-grey;
+    transition: 300ms ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    button{
+        align-self: center;
+        margin-left: 1rem;
+        border: none;
+        color: white;
+        background-color: transparent;
+        text-align: center;
+        font-size: .6rem;
+        font-family: "Consolas";
+        &:hover{
+            background-color: $light-grey;
+            cursor: pointer;
+        }
+    }
+
+    .editText{
+        margin-left: 4rem;
+        width: 30rem;
+        transition: 300ms ease-in-out;
+    }
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: $side-bar-width;
+    position: fixed;
+    background-color: $dark-grey;
+    transition: 300ms ease-in-out;
+    top: 1rem;
+    box-shadow: 5px 0px 15px 5px rgba(0,0,0,0.3);
+
+
+    h1{
+        font-weight: normal;
+        color: white;
+        text-align: center;
+        font-weight: lighter;
+        transition: 300ms ease-in-out;
+    }
+
+    ul{
+        display: flex;
+        padding: 0;
+        padding-top: 8vh;
+        margin: 0;
+        align-items: center;
+        flex-direction: column;
+        list-style: none;
+        height: auto;
+        width: auto;
+    }
+
+    .aLink{
+        display: flex;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        margin-top: 1vh;
+        width: 100%;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        font-weight: lighter;
+        transition: 300ms ease-in-out;
+        &:hover{
+            background-color: $middle-grey;
+            color: green;
+            cursor: pointer;
+        }
+    }
+    
+    .active{
+        background-color: $middle-grey;
+    }
+
+    button{
+        // margin-top: .5rem;
+        border: none;
+        color: white;
+        background-color: transparent;
+        text-align: center;
+        font-size: 2rem;
+        font-family: "Consolas";
+        &:hover{
+            background-color: $light-grey;
+            cursor: pointer;
+        }
+    }
+}
+
+.main-body-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-left: $side-bar-width;
+    width: auto;
+    height: auto;
+    transition: 300ms ease-in-out;
+}
+
+.hero-section{
+    display: flex;
+    width: auto;
+    height: auto;
+    font-weight: normal;
+    justify-content: space-between;
+
+    h1{
+        font-weight: inherit;
+        color: $pri-blue
+    }
+
+    h2{
+        font-weight: inherit;
+        color: $pri-orange
+    }
+
+    a{
+        margin-left: 2rem;
+        margin-top: 1rem;
+        font-size: 1rem;
+        text-decoration: none;
+        padding: .8rem 1.2rem;
+        color: white;
+        background-color: darken($dark-grey, 4.5);
+        border: $dark-grey 1px solid;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px 3px rgba(0,0,0,0.3);
+        white-space: nowrap;
+        cursor: pointer;
+        &:hover{
+            background-color: $light-grey;
+        }
+    }
+
+    .text-wrapper{
+        margin: 10vh 0 0 5vw;
+        height: 100vh;
+        padding: 0;
+    }
+
+    .computerWrapper{
+        width: 45vw;
+        padding: 10vh 0 20vh 0vw;
+    }
+
+    .computer-pic{
+        // max-width: 45vw;
+        // max-height: 40rem;
+        // flex-grow: 1;
+        height: auto;
+        width: 100%;
+    }
+
+}
+
+.project-section{
+    margin-top: 13vh;
+    margin-left: 2rem;
+    width: auto;
+    height: 87vh;
+    h1{
+        color: white
+    }
+    .proCarousel{
+        margin-top: 5vh;
+        margin-left: 10vw;
+    }
+}
+
+
+.proModal{
+    position: absolute;
+    padding: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $middle-grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 40vw;
+    min-height: 40vh;
+    max-width: auto;
+    max-height: auto;
+    border: white 1px solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
+
+    h1{
+        color: $pri-blue
+    }
+    p{
+        color: $pri-orange;
+    }
+    a{
+        margin: 1rem;
+        font-size: 1rem;
+        text-decoration: none;
+        padding: .8rem 1.2rem;
+        color: white;
+        background-color: darken($dark-grey, 4.5);
+        border: $dark-grey 1px solid;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px 3px rgba(0,0,0,0.3);
+        white-space: nowrap;
+        cursor: pointer;
+        &:hover{
+            background-color: $light-grey;
+        }
+    }
+}
+
+.about-section{
+    margin: 13vh 0 0 2rem;
+    width: auto;
+    height: auto;
+
+    h1{
+        color: white;
+    }
+
+    .aboutPicText{
+        margin: 10vh 15vw 0 10vw;
+        display: flex;
+        flex-wrap: wrap;
+
+        .aboutText{
+            margin: 2vh 0 2vh 2vw;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+            
+            p{
+                width: 100%;
+                color: $pri-orange
+
+            }
+            .techIcons{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                p{
+                    color: white;
+                    font-size: 48px;
+                    width: auto;
+                    margin: 0%;
+                }
+            }
+        }
+
+
+        .profilePic{
+            margin: 20px 40px 20px 20px;
+            height: 200px;
+            width: 200px;
+            border: $pri-blue 2px solid;
+            border-radius: 100%;
+        }
+
+    }
+    
+}
+
+.contact-section{
+    margin-top: 13vh;
+    margin-left: 2rem;
+    width: auto;
+    height: auto;
+
+    h1{
+        color: white;
+    }
+
+    .formControl{
+        margin: 7vh 15vw 17vh 10vw;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        box-shadow: 0 10px 15px rgba(0,0,0,.3);
+        border-radius: 10px;
+        border: $dark-grey 2px solid;
+
+        .formControlBox{
+            padding: 1rem 1rem 0 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            label{
+                align-self: flex-start;
+                // margin: 1rem 0 0 2rem;
+                color: $pri-orange;
+            }
+            
+            input{
+                padding: .5rem;
+                margin: 0 0 0 0;
+                width: 98%;
+                border: $dark-grey 2px solid;
+                border-radius: 10px;
+                box-shadow: 0 10px 15px rgba(0,0,0,.3);
+            }
+
+            textarea{
+                padding: .5rem;
+                margin: 0 0 0 0;
+                width: 98%;
+                border: $dark-grey 2px solid;
+                border-radius: 10px;
+                box-shadow: 0 10px 15px rgba(0,0,0,.3);
+            }
+
+            p{
+                align-self: flex-start;
+                margin: 0;
+                color: $pri-blue;
+            }
+        }
+
+        input[type=submit]{
+            font-size: 1rem;
+            margin: 1rem 1rem 0rem 1rem;
+            padding: .8rem 1.2rem;
+            color: white;
+            background-color: darken($dark-grey, 4.5);
+            border: $dark-grey 1px solid;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px 3px rgba(0,0,0,0.3);
+            white-space: nowrap;
+            cursor: pointer;
+            &:hover{
+                background-color: $light-grey;
+            }
+        }
+
+        dd{
+            font-size: 1rem;
+            margin: 1rem 1rem 0 1rem;
+            padding: .8rem 1.2rem;
+            width: auto;
+            color: white;
+            background-color: darken($dark-grey, 4.5);
+            border: $dark-grey 1px solid;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px 3px rgba(0,0,0,0.3);
+            white-space: nowrap;
+        }
+
+    }
+
+}
+
+.footer-section{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color: #027fd3;
+    bottom: 0;
+    position: absolute;
+
+    a{
+        height: 50px;
+        width: 50px;
+        margin-left: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .computerWrapper{
+        display: none;
+    }
+
+    .computer-pic{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    :root{
+        font-size: 16px;
+    }
+    .hero-section{
+        .computer-pic{
+            display: none;
+        }
+        height: auto;
+    }
+    .project-section{
+        height: auto;
+    }
+    .about-section{
+        height: auto;
+    }
+    .contact-section{
+        height: auto;
+    }
+}
